@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimodal Affective Database</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row md:justify-between">
+                <div class="py-4">
+                    <h1 class="text-xl font-semibold">Multimodal Affective Database</h1>
+                </div>
+                <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 pb-4 md:pb-0">
+                    <a href="https://empathiccomputing.org/" class="py-2 md:py-4 px-4 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 text-sm md:text-base">Empathic Computing Lab</a>
+                    <a href="https://www.auckland.ac.nz/en/abi/our-research/research-groups-themes/nervous-system/animus-laboratory.html" class="py-2 md:py-4 px-4 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 text-sm md:text-base">Animus Lab</a>
+                    <a href="#contact" class="py-2 md:py-4 px-4 hover:text-blue-500 text-sm md:text-base">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <section id="hero" class="text-center py-8 md:py-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">The fNIRS-EEG Affective Database - FEAD</h2>
+            <p class="text-lg md:text-xl text-gray-600 mb-8">A comprehensive collection of cortical naurovascular dynamics in response to multimedia stimuli for affective computing</p>
+        </section>
+
+        <section id="description" class="py-8 md:py-12">
+            <h3 class="text-2xl font-bold mb-6">Database Overview</h3>
+            <div class="bg-white rounded-lg shadow-md p-4 md:p-6">
+                <p class="text-gray-700 mb-4">
+                    <strong>Overview:</strong> The fNIRS-EEG Affective Database (FEAD) is a comprehensive neuroimaging collection comprising three distinct sub-databases: FEAD-Video, FEAD-Sound, and FEAD-Music. Each sub-database contains synchronized fNIRS and EEG recordings from participants who were exposed to specific types of emotional stimuli. This unique structure enables researchers to investigate emotional responses across different sensory modalities while supporting the development of next-generation Brain-Computer Interfaces (BCI) and Human-Computer Interaction (HCI) systems. The database provides synchronized neural response data alongside carefully curated emotional stimuli, facilitating research into the complex relationship between multimedia stimuli and brain activity patterns.
+                </p>
+                <div class="space-y-4 text-gray-700">
+                    <p><strong>Data Collection:</strong> Neural responses were recorded using synchronized fNIRS and EEG systems, providing complementary insights into both hemodynamic and electrical brain activity. To ensure consistency across all three sub-databases, we maintained identical EEG and fNIRS configurations throughout all experiments, while varying only the type of emotional stimuli (video, sound, or music) presented to participants.</p>
+                    
+                    <figure class="mt-6 mb-6">
+                        <div class="flex justify-center">
+                            <img src="03-Electrode placements.png" 
+                                 alt="Experimental Setup" 
+                                 class="max-w-full md:max-w-2xl w-auto h-auto object-contain"/>
+                        </div>
+                        <figcaption class="text-center text-gray-600 mt-2 italic text-sm md:text-base">
+                            Integrated fNIRS and EEG configuration used across all experiments.
+                        </figcaption>
+                    </figure>
+                    
+                    <p><strong>Quality Assurance:</strong> All recordings underwent rigorous quality control, including meticulous experimental design and signal quality assessment. Stimuli were selected and curated from validated affective multimedia databases.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="overview" class="py-8 md:py-12">
+            <h3 class="text-2xl font-bold mb-6">Access Portal</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 md:p-6 hover:shadow-lg transition-shadow">
+                    <h4 class="text-xl font-semibold mb-4 text-blue-600">Video Database</h4>
+                    <p class="text-gray-700 mb-4">Collection of synchronized fNIRS and EEG recordings from 37 participants while watching emotional video stimuli. Contains neural responses to various types of video content designed to evoke different emotional states, ideal for studying visual-emotional processing and brain activation patterns.</p>
+                    <a href="video.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 inline-block">Access Video Database</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 md:p-6 hover:shadow-lg transition-shadow">
+                    <h4 class="text-xl font-semibold mb-4 text-blue-600">Sound Database</h4>
+                    <p class="text-gray-700 mb-4">Synchronized fNIRS and EEG data recorded while 34 participants listened to emotional sound stimuli. Features neural responses to various naturalistic sounds, emotional vocalizations, and ambient noises,erfect for investigating auditory processing and emotional response in the brain.</p>
+                    <div class="text-gray-500 italic mb-2">Coming Soon - Available after publication</div>
+                    <button disabled class="bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed">Database Coming Soon</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 md:p-6 hover:shadow-lg transition-shadow">
+                    <h4 class="text-xl font-semibold mb-4 text-blue-600">Music Database</h4>
+                    <p class="text-gray-700 mb-4">fNIRS and EEG recordings collected while 29 participants listened to different types of music. Documents neural responses to various medieval musical pieces designed to evoke different emotional states, enabling research into music-induced emotions and neural correlates of music processing.</p>
+                    <div class="text-gray-500 italic mb-2">Coming Soon - Available after publication</div>
+                    <button disabled class="bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed">Database Coming Soon</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-8 md:py-12">
+            <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+            <div class="bg-white rounded-lg shadow-md p-4 md:p-6">
+                <div class="space-y-4">
+                    <ul class="text-gray-700 space-y-2">
+                        <li><strong>Primary Investigators:</strong> Alireza F. Nia, Gonzalo D. Maso Talou, Mark Billinghurst</li>
+                        <li><strong>Institution:</strong> Auckland Bioengineering Institute</li>
+                    </ul>
+                    <p class="text-gray-700">
+                        For questions about the databases or collaboration opportunities, please contact: 
+                        <a href="mailto:afar140@aucklanduni.ac.nz" class="text-blue-500 hover:text-blue-700">Alireza F. Nia (afar140@aucklanduni.ac.nz)</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="citation" class="py-8 md:py-12">
+            <h3 class="text-2xl font-bold mb-6">How to Cite</h3>
+            <div class="bg-white rounded-lg shadow-md p-4 md:p-6">
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4 text-blue-600">FEAD - Video Database Citation</h4>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <p class="text-gray-700 font-mono text-sm">
+                                A. F. Nia, V. Tang, V. Malyshau, A. Barde, G. M. Talou and M. Billinghurst, "FEAD: Introduction to the fNIRS-EEG Affective Database - Video Stimuli," in IEEE Transactions on Affective Computing.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        Note: Citations for the Sound and Music databases will be provided upon publication.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center">
+                <p class="text-gray-300">
+                    © 2024 Auckland Bioengineering Institute. All rights reserved.<br>
+                    For research purposes only.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
