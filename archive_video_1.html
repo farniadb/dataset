@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEAD - Video Stimuli</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="py-4">
+                    <a href="index.html" class="text-xl font-semibold hover:text-blue-500">Multimodal Affective Database</a>
+                </div>
+                <div class="flex space-x-6">
+                    <!-- <a href="https://github.com/FEAD-Database/fead-db" class="py-4 px-4 hover:text-blue-500 hover:border-b-2 hover:border-blue-500">Github</a> -->
+                    <a href="https://empathiccomputing.org/" class="py-4 px-4 hover:text-blue-500 hover:border-b-2 hover:border-blue-500">Empathic Computing Lab</a>
+                    <a href="#contact" class="py-4 px-4 hover:text-blue-500">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <section class="text-center py-12">
+            <h2 class="text-4xl font-bold mb-4">FEAD - Video Stimuli</h2>
+            <p class="text-xl text-gray-600 mb-8">Specific description of this database category</p>
+        </section>
+
+        <section class="py-12">
+            <h3 class="text-2xl font-bold mb-6">Database Statistics</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h4 class="text-xl font-semibold mb-4 text-blue-600">Demographics</h4>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>Total Participants: 37 (20 Male | 17 Female)</li>
+                        <li>Age Range: 22-44 years old (mu=28.97, var=5.73)</li>
+                        <li>Dominant Hand: 33R | 4L</li>
+                        <li>Language: 24 Non-English | 13 English</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h4 class="text-xl font-semibold mb-4 text-blue-600">Technical Details</h4>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>Format: [Formats]</li>
+                        <li>Quality: [Details]</li>
+                        <li>Sampling rate: [Rate]</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h4 class="text-xl font-semibold mb-4 text-blue-600">Ground Truth</h4>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>Time period: [Range]</li>
+                        <li>Categories: [Types]</li>
+                        <li>Languages: [Languages]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12">
+            <h3 class="text-2xl font-bold mb-6">Access Request</h3>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <form id="consentForm" class="space-y-6" onsubmit="sendEmail(event)">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="email" id="email" name="email" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="institution" class="block text-sm font-medium text-gray-700">Institution</label>
+                        <input type="text" id="institution" name="institution" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="purpose" class="block text-sm font-medium text-gray-700">Research Purpose</label>
+                        <textarea id="purpose" name="purpose" rows="4" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
+                    </div>
+                    <div class="flex items-start">
+                        <input type="checkbox" id="consent" name="consent" required
+                            class="mt-1 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                        <label for="consent" class="ml-2 block text-sm text-gray-700">
+                            I agree to the terms of use and data handling guidelines
+                        </label>
+                    </div>
+                    <div>
+                        <button type="submit"
+                            class="w-full bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors">
+                            Submit Access Request
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center">
+                <p class="text-gray-300">
+                    © [Year] [Institution]. All rights reserved.<br>
+                    For research purposes only.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function sendEmail(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Replace with your email handling logic
+            const emailBody = `
+                Name: ${data.name}
+                Email: ${data.email}
+                Institution: ${data.institution}
+                Research Purpose: ${data.purpose}
+                Consent: ${data.consent ? 'Yes' : 'No'}
+            `;
+            
+            // You'll need to implement actual email sending functionality
+            // This is just a placeholder to show the structure
+            console.log('Form submitted:', emailBody);
+            alert('Thank you for your request. We will contact you shortly.');
+        }
+    </script>
+</body>
+</html>
